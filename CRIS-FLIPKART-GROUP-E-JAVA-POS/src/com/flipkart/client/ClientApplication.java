@@ -18,16 +18,16 @@ public class ClientApplication {
 			switch(input) {
 			case 1:
 				System.out.println("Enter the Username :--");
-				username=s.nextLine();
+				username=s.next();
 				System.out.println("Enter the Password :--");
-				password=s.nextLine();
+				password=s.next();
 				System.out.println("Role");
-				role=s.nextLine();
-				if(role=="student") {
+				role=s.next();
+				if(role.equals("student")) {
 					studentMenu(username,password);
-				}else if(role=="professor") {
+				}else if(role.equals("professor")) {
 					professorMenu(username,password);
-				}else if(role=="admin") {
+				}else if(role.equals("admin")) {
 					adminMenu(username,password);
 				}
 				break;
@@ -48,7 +48,7 @@ public class ClientApplication {
 	private static void adminMenu(String username, String password) {
 		// TODO Auto-generated method stub
 		System.out.println("Admin Menu:");
-		System.out.println("1. Add Professor\n2. Remove Professor\n3. Modify Course\n4. Add Course\n5. Remove Course\n 6. Approve Student Registration\n 7. Exit");
+		System.out.println("1. Add Professor\n2. Remove Professor\n3. Modify Course\n4. Add Course\n5. Remove Course\n6. Approve Student Registration\n7. Exit");
 		Scanner s=new Scanner(System.in);
 		int in =0;
 		while(in!=5) {
